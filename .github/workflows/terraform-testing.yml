@@ -1,5 +1,5 @@
 name: Terraform Testing
-on:[push]
+one: [push]
 jobs:
   Terraform-Fmt-Validate:
       runs-on: ubuntu-latest 
