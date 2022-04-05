@@ -4,9 +4,9 @@ resource "aws_instance" "my_public_server" {
   subnet_id              = data.aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.my_public_app2_sg.id]
   key_name               = var.my_keypair
-  
+
   tags = {
-      Name = "public_server"
+    Name = "public_server"
   }
 }
 
@@ -16,8 +16,8 @@ resource "aws_instance" "my_private_server" {
   subnet_id              = data.aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.my_private_app2_sg.id]
   key_name               = var.my_keypair
-  count = var.number_of_instances
+  count                  = var.number_of_instances
   tags = {
-      Name = "private_server_${count.index + 1}"
+    Name = "private_server_${count.index + 1}"
   }
 }

@@ -36,5 +36,5 @@ variable "ec2_type" {
 }
 
 variable "number_of_instances" {
-    description = "Amount of instances for my private subnets"
+  description = "Amount of instances for my private subnets"
 }
