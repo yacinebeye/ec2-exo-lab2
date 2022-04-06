@@ -17,7 +17,7 @@ resource "aws_security_group" "my_public_app2_sg" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] 
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   #OUTBOUND CONNECTIONS
