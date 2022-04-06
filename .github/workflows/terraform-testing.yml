@@ -25,5 +25,20 @@ jobs:
         - name: Terraform Validate
           run: terraform validate
 
+        - name: git clone my repo
+          run: actions/checkout@v2
+
+
+        - name: IF ready to go
+          run: hashicorp/setup-terraform@v1
+
+        - name: Init our project 
+          run: terraform init
+
+        - name: run a plan  
+          run: terraform plan
+
+
+
 
 
