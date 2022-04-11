@@ -26,3 +26,11 @@ data "aws_subnet" "public" {
     values = [var.public_subnet_name]
   }
 }
+
+# DATA SOURCE FOR PRIVATE SUBNET
+data "aws_subnet" "private" {
+  filter {
+    name   = "tag:Name"
+    values = [var.private_subnet_name]
+  }
+}
